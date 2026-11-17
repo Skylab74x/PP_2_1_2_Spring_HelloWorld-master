@@ -14,6 +14,8 @@ public class AppConfig {
     @Bean(name = "cat")
     @Scope("prototype")
     public Cat cat() {
-        return new Cat();
+        Cat cat = new Cat();
+        cat.setNoise("Meow <3");
+        return cat;
     }
 }
